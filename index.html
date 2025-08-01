@@ -1,0 +1,286 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloomSphere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>BloomSphere</h2>
+        <ul>
+            <li><a href=".html">View Cart</a></li>
+            <li><a href="#fruits">Fruits</a></li>
+            <li><a href="#plants">Plants</a></li>
+            <li><a href="#decorative">Decorative Plants</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <h1 class="title">Welcome to BloomSphere</h1>
+        <p class="punchline">  Bringing Nature to Your Doorstep</p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search-box" placeholder="Search for a plant...">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <div id="fruits" class="product-category">
+        <h2>Fruits</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://imgs.search.brave.com/tNDZCTXUsvVGgm6xWmHWZ6sv7n0FKaTw45mnI5Ib8TA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ldmVy/Z2xhZGVzLmZhcm0v/Y2RuL3Nob3AvcHJv/ZHVjdHMvaW1hZ2Vf/NDYwMDRhOGYtZWQ4/NC00OTUyLTljZTQt/YmQwZWExNmQzMzA1/LmpwZz92PTE3NDgy/OTkwNTcmd2lkdGg9/NTMz" alt="Mango Plant">
+                <h3>Mango Plant</h3>
+                <p>Perfect for your garden</p>
+                <p class="price">Rs 1999/-</p>
+                <button onclick="addToCart('Mango Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/aY37N1lAtcGQSnljVtkTIhWsg2x2pJFlHqGq8pfXgx0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTAv/MDU5LzU2MC9zbWFs/bC93YXRlcm1lbG9u/LXdpdGgtZ3JlZW4t/bGVhdmVzLW9uLXdo/aXRlLWJhY2tncm91/bmQtcGhvdG8uanBl/Zw" alt="Watermelon Plant">
+                <h3>Watermelon Plant</h3>
+                <p>Grow your own watermelon</p>
+                <p class="price">Rs 1499/-</p>
+                <button onclick="addToCart('Watermelon Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/QfzUSA1XHusPFjl_UqISznsqNheX2ZOLMS__2q0dka0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9hcHBs/ZS1icmFuY2gtMTYy/OTIzNzcuanBn" alt="Apple Plant">
+                <h3>Apple Plant</h3>
+                <p>Apple a day keeps the doctor away</p>
+                <p class="price">Rs 2499/-</p>
+                <button onclick="addToCart('Apple Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/9cIGG6wrUAFm032IZqTgKSbPpSz0umkAUrgCWRn5nGI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODF3c0JNK0x4UEwu/anBn" alt="Pomogranate Plant">
+                <h3>Pomogranate Plant</h3>
+                <p>Rich pomogranate plant for your garden</p>
+                <p class="price">Rs 250/-</p>
+                <button onclick="addToCart('Pomogranate Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/oFBAaQMSQrDIV-WNV_WRUHv6SV8rJRD083SodmApztw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY2RuLWZpbGVz/LWEuY29tL3JlYWR5/X3VwbG9hZHMvbWVk/aWEvOTE1MTUzNC8y/MDAwXzYzODkxZWFi/YWI3MmYuanBn" alt="Banana Plant">
+                <h3>Banana Plant</h3>
+                <p>Robusta bananas rich yellow color</p>
+                <p class="price">Rs 1499/-</p>
+                <button onclick="addToCart('Banana Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://www.thesill.com/cdn/shop/files/the-sill_pineapple-plant_gallery_01.jpg?v=1741034155&width=1946" alt="Pineapple Plan">
+                <h3>Pineapple Plant</h3>
+                <p>Get yours now!</p>
+                <p class="price">Rs 1999/-</p>
+                <button onclick="addToCart('Pineapple Plan')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/q7ljFFGEKf-RC5Wn-w4x8iuQQXBcfH8KsG5SAaCUJuk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9m/cmVzaC1ncmVlbi1n/cmFwZXMtd2l0aC1s/ZWF2ZXMtaXNvbGF0/ZWQtd2hpdGVfMTY3/OTQ2LTE2LmpwZz9z/ZW10PWFpc19oeWJy/aWQ" alt="Grape Vine">
+                <h3>Grape Vine</h3>
+                <p>Grape wine at your footsteps</p>
+                <p class="price">Rs 2199/-</p>
+                <button onclick="addToCart('Grape Vine')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/2wawM06-rurX0_vJokCWWmVKa-f6B-ZJtLzXv_K-kZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi90aHJl/ZS1yaXBlLWNoZXJy/aWVzLXN0ZW0tbGVh/Zi1pc29sYXRlZC13/aGl0ZS1iYWNrZ3Jv/dS10aHJlZS1yaXBl/LWNoZXJyaWVzLXN0/ZW0tbGVhZi1pc29s/YXRlZC13aGl0ZS0x/MjEyMDI2MjUuanBn" alt="Cherry Plant">
+                <h3>Cherry Plant</h3>
+                <p>Red cherries</p>
+                <p class="price">Rs 2499/-</p>
+                <button onclick="addToCart('Cherry Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/3WQME_7WqpoJ6JJKbiq2Rwxj7a0oP5Gb2ccPjeYpgNk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vcGhvdG9z/L3N0cmF3YmVycnkt/cGxhbnQtZnJhZ2Fy/aWEtcGljdHVyZS1p/ZDU4NTg1NTU5MT9r/PTIwJm09NTg1ODU1/NTkxJnM9NjEyeDYx/MiZ3PTAmaD15Zmxo/bHZKeDVhUVNBbldl/SUNmbTFWR19vWkNH/M25wa3o0UVJGMnNa/VHVZPQ" alt="Strawberry Plant">
+                <h3>Strawberry Plant</h3>
+                <p>Grow your own strawberry plant</p>
+                <p class="price">Rs 999/-</p>
+                <button onclick="addToCart('Strawberry Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/G9woJrihrbxeBHiNbEXeV8Rc96S2VYo4r0njDzOuhU8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MzY1MTExMzI3NzAt/ZTUwNThjN2U4YzQ2/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE5ueDhaM1Zo/ZG1GOFpXNThNSHg4/TUh4OGZEQT0" alt="Strawberry Plant">
+                <h3>Guava Plant</h3>
+                <p>Reddish-white guava plant</p>
+                <p class="price">Rs Rs 799/-</p>
+                <button onclick="addToCart('Guava Plant')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="plants" class="product-category">
+        <h2>Plants</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://imgs.search.brave.com/buNURVMkaUM1NiYjGhjejB4VFq48J1P30r8SYYOX-AM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEyLzg1LzE1Lzkx/LzM2MF9GXzEyODUx/NTkxNzdfdExFMHJR/RzhjNkJTV2o2SGZn/bnd4SXV6SmRIQWxo/bHMuanBn" alt="Rose Plant">
+                <h3>Rose Plant</h3>
+                <p>Beautiful blooms year-round</p>
+                <p class="price">Rs 499/-</p>
+                <button onclick="addToCart('Rose Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/syIJBs6M_Da_giDWICRsgSzuen3TIm4OU4RK20YgkNk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTY2/MDA2ODQ1L3Bob3Rv/L2hpYmlzY3VzLWxh/eWluZy1kb3duLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1O/UlRYOFlJRk1WZzR1/Sk02ZzVEbUo1em56/NkpOdkcwV0F6XzJP/bERhb1pVPQ" alt="Hibiscus Plant">
+                <h3>Hibiscus Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 599/-</p>
+                <button onclick="addToCart('Hibiscus Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/Gbtpo-uXu42QSXBHM80N9D1HrTSYoJAdlUhqIy56FBg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTAx/ODk5NzI3L3Bob3Rv/L2phc21pbmUuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWMx/dWIzS3NqQ2ZVTFNq/YVRNRTNxcHZOeEtU/UzB6TVhKa2RCQkx2/dWY1dEk9" alt="Jasmine Plant">
+                <h3>Jasmine Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 699/-</p>
+                <button onclick="addToCart('Jasmine Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/XPOmdN1pjmwZFi4TA70REclWHrwQYl3wnxCXlL2jDPA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc1/NDU1MzEyL3Bob3Rv/L3N1bmZsb3dlci5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/Q1VOOG42cWdYTjlo/UEExdy1oNE45eERV/bkFodWNzN2duSlpQ/cjF5TVZSbz0" alt="Sunflower Plant">
+                <h3>Sunflower Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 1499/-</p>
+                <button onclick="addToCart('Sunflower Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/6V4Vx71_0StTJeEDvtvnGbMiL9nqSDQaG8do7iy02q0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzExLzA2Lzk5Lzc4/LzM2MF9GXzExMDY5/OTc4OTRfR3hGRnF2/N0R6R0FDTzdOZkJ1/SlBuRUp3ZEVHd0xV/TGwuanBn" alt="Marigold Plant">
+                <h3>Marigold Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 399/-</p>
+                <button onclick="addToCart('Marigold Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/G3DWvAXBPPFCNMqJFz0R53rIdwcX5l7h9le3cLclqnk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8x/MC8wMi8xNC8wNi9s/b3R1cy1mbG93ZXIt/MjgwODkxN182NDAu/anBn" alt="Lotus Plant">
+                <h3>Lotus Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 1499/-</p>
+                <button onclick="addToCart('Lotus Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/zPmc53hl-P1KGWcdZMCqCMJMzh2F4pYX_GZX-uqAjxQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI4/OTcyMjMzOC9waG90/by9waW5rLWJvdWdh/aW52aWxsZWEtZmxv/d2Vycy1pbi1hbnRp/cXVlLWNvcHBlci1w/b3QuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPW5nYVMyUDFM/cHlKTVJKQnF4ZWx6/LXR3ckZCenRRRzlk/bklucFlxdGcwdzA9" alt="Bougainvillea Plant">
+                <h3>Bougainvillea Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 250/-</p>
+                <button onclick="addToCart('Bougainvillea Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/2B2YOru0Z5Dom0ihi5UbLc82AyqjKAGKIy6vMapyl4g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MDcvMzc1NC81NDAx/L2ZpbGVzL1A0MTAy/X0xPTF9wcmVzZXRf/ZnRkLW14LWhlcm8t/bHYtbmV3LmpwZz92/PTE2OTc1Njg1MDIm/d2lkdGg9MTkyMA" alt="Lilies Plant">
+                <h3>Lilies Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 1299/-</p>
+                <button onclick="addToCart('Lilies Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/a52J_AdIp2z0F3UBnfy-0CsJWg9aT5YLVdqcRgqPW_I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/Lmp1c3RhZGRpY2Vv/cmNoaWRzLmNvbS9j/ZG4vc2hvcC9wcm9k/dWN0cy9KNTAwN19w/cm9kdWN0aW1hZ2Vf/bGFyZ2UuanBnP3Y9/MTY4MTM4ODgxNQ" alt="Orchid Plant">
+                <h3>Orchid Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 1999/-</p>
+                <button onclick="addToCart('Orchid Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://nurserylive.com/cdn/shop/products/nurserylive-geranium-any-color-plant-1-598236_190x253.jpg?v=1679750117" alt="Geranium Plant">
+                <h3>Geranium Plant</h3>
+                <p>Colorful flowers all season</p>
+                <p class="price">Rs 850/-</p>
+                <button onclick="addToCart('Geranium Plant')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="decorative" class="product-category">
+        <h2>Decorative Plants</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://www.thesill.com/cdn/shop/files/the-sill_Large-Money-Tree_Large_Agnes-White_Variant.jpg?v=1742484621&width=493" alt="Money Plant">
+                <h3>Money Plant</h3>
+                <p>Bring wealth and prosperity</p>
+                <p class="price">Rs 170/-</p>
+                <button onclick="addToCart('Money Plant')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://imgs.search.brave.com/MTi2LzsiG7Ftl8_CgQjBkY03YBMEDyHdurIq6YijUic/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzAw/NjgvNDIxNS81MDkw/L2ZpbGVzL1NuYWtl/X1BsYW50X1NwaXJp/dHVhbF9TaWduaWZp/Y2FuY2VfNDgweDQ4/MC5qcGc_dj0xNzI5/ODUxODU4" alt="Snake Plant">
+                <h3>Snake Plant</h3>
+                <p>Easy to care for and stylish</p>
+                <p class="price">Rs 299/-</p>
+                <button onclick="addToCart('Snake Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/QNUa00qimVXBJE2IzTpAG-7Femm6whRAqVoNlNJpsco/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9ibG9v/bXNjYXBlLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/Ni9ibG9vbXNjYXBl/LXNwaWRlci1wbGFu/dF9jbGF5XzA2MjYt/c2NhbGVkLWUxNjQ5/MTkzOTI5NTAzLmpw/Zz92ZXI9NTQyNTc2" alt="Spider Plant">
+                <h3>Spider Plant</h3>
+                <p>Easy to care for and stylish</p>
+                <p class="price">Rs 350/-</p>
+                <button onclick="addToCart('Spider Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/ZPtaaT5RcAdUi-QPR9HRTjK4qJ-TbELGo13Bb0APzng/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbGFu/dHVyYS5nYXJkZW4v/dWsvd3AtY29udGVu/dC91cGxvYWRzL3Np/dGVzLzIvMjAyMS8x/MS9wb3R0ZWQtY3Jv/dG9uLTEwMjR4Njgz/LmpwZz94NjM2NTc" alt="Croton Plant">
+                <h3>Croton Plant</h3>
+                <p>Easy to care for and stylish</p>
+                <p class="price">Rs 450/-</p>
+                <button onclick="addToCart('Croton Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/6BUL-AKpiuKBytJkevvI_fOLxdB5Wh_SjPvvft06V2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWFydGhhc3Rld2Fy/dC5jb20vdGhtYi9L/bGlmSzN5Z3d0a0ZP/OUd5RFRjVzNRam9p/TEU9LzE1MDB4MC9m/aWx0ZXJzOm5vX3Vw/c2NhbGUoKTptYXhf/Ynl0ZXMoMTUwMDAw/KTpzdHJpcF9pY2Mo/KS9tcy1jYWxhdGhl/YS1nZXR0eS04MDRk/MWQyOTNmMGM0ODUw/YjNlNDg4NTI4Yzk4/NzA1NS5qcGc" alt="Calathea Plant">
+                <h3>Calathea Plant</h3>
+                <p>Easy to care for and stylish</p>
+                <p class="price">Rs 999/-</p>
+                <button onclick="addToCart('Calathea Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/Vdmf0d_T6v3_Y2rjy4ZNa-VXROj0EjhnZtjRUMtmBD8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b3VyaG91c2VwbGFu/dHMuY29tL2ltZ3Mt/Y29udGVudC9hcmVj/YS1wYWxtLWhvdXNl/cGxhbnQuanBn" alt="Areca Palm Plant">
+                <h3>Areca Palm Plant</h3>
+                <p>Easy to care for and stylish</p>
+                <p class="price">Rs 799/-</p>
+                <button onclick="addToCart('Areca Palm Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/1j1TR0xzdHfk5ZIMWERSzx0wMzTSswLV8nNGdOL_9KY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZXBpY2dhcmRlbmlu/Zy5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMTcvMDIvQS1j/bG9zZS11cC1zaG90/LW9mLWEtaG91c2Vw/bGFudC1uYW1lZC1E/cmFjYWVuYS1tYXJn/aW5hdGEuanBn" alt="Dracaena Marginata Plant">
+                <h3>Dracaena Marginata Plant</h3>
+                <p>Easy to care for and stylish</p>
+                <p class="price">Rs 750/-</p>
+                <button onclick="addToCart('Dracaena Marginata  Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/42gtrPpoyHgwmXKaZxhTTkNCuMrlMgxnsc9AGnnySfo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nYXJk/ZW5nb29kc2RpcmVj/dC5jb20vY2RuL3No/b3AvZmlsZXMvenot/cGxhbnQtMTYwODY2/MTA2MDgxNzBfeDU2/MC5wcm9ncmVzc2l2/ZS5qcGc_dj0xNjk1/NDY1Nzky" alt="Dracaena Marginata Plant">
+                <h3>ZZ Plant</h3>
+                <p>Glossy leaves, survives in low light</p>
+                <p class="price">Rs 699/-</p>
+                <button onclick="addToCart('ZZ Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/jvSLNCFs8NMwRn9W1gtCyTYBwKNcOvtdEHbdLv0gZ2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjAv/Mjk1Lzg3MC9zbWFs/bC9pbmRvb3ItcnVi/YmVyLXBsYW50LWlu/LWEtc2ltcGxlLXBv/dC1vbi1hLW1pbmlt/YWxpc3Qtc2hlbGYt/d2l0aC1hLWJlaWdl/LXdhbGwtYmFja2dy/b3VuZC1mcmVlLXBo/b3RvLmpwZWc" alt="Dracaena Marginata Plant">
+                <h3>Rubber Plant</h3>
+                <p>Shiny, large leaves, great for modern interiors</p>
+                <p class="price">Rs 399/-</p>
+                <button onclick="addToCart('Rubber Plant')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://imgs.search.brave.com/UM56jCcfpKVR7IlvDKP6012mhBxJ9MTdXfcggB43iv0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjYv/NzQzLzE5My9zbWFs/bC9vZi1wZWFjZS1s/aWx5LWluLW1pbmlt/YWxpc3QtcG90LWFz/LWhvdXNlcGxhbnQt/Zm9yLWhvbWUtZGVj/b3JhdGlvbi1pc29s/YXRlZC1vbi13aGl0/ZS1iYWNrZ3JvdW5k/LWdlbmVyYXRpdmUt/YWktcGhvdG8uanBn" alt="Dracaena Marginata Plant">
+                <h3>Peace Lily</h3>
+                <p>Elegant with white blooms, improves air quality</p>
+                <p class="price">Rs 899/-</p>
+                <button onclick="addToCart('Peace Lily')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
