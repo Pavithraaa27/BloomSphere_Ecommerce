@@ -16,11 +16,11 @@
         </ul>
     </nav>
 
-    <main style="margin-left:240px; padding:40px;">
+    <main class="payment-main">
         <div class="payment-container">
             <h2>Payment Information</h2>
 
-            <div id="totalAmount" style="margin-bottom:20px; font-size:18px;"></div>
+            <div id="totalAmount" class="total-amount"></div>
 
             <form id="paymentForm">
 
@@ -49,36 +49,48 @@
                     <input type="password" placeholder="123" maxlength="3" required>
                 </div>
 
-                <button type="submit" class="payment-btn">Complete Payment</button>
+                <button type="submit" class="payment-btn">
+                    Complete Payment
+                </button>
 
             </form>
         </div>
     </main>
 
     <script>
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
-        let total = 0;
+        document.addEventListener("DOMContentLoaded", function () {
 
-        cart.forEach(item => {
-            total += item.price * item.quantity;
-        });
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let total = 0;
 
-        document.getElementById("totalAmount").innerHTML =
-            "<strong>Total Amount: Rs " + total + "</strong>";
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+            });
 
-        document.getElementById("paymentForm").addEventListener("submit", function(e) {
-            e.preventDefault();
+            const totalElement = document.getElementById("totalAmount");
 
             if (cart.length === 0) {
-                alert("Your cart is empty 😢");
-                return;
+                totalElement.innerHTML = "<strong>Your cart is empty 😢</strong>";
+            } else {
+                totalElement.innerHTML = "<strong>Total Amount: Rs " + total + "</strong>";
             }
 
-            alert("Payment Successful 🌸 Thank you for shopping with BloomSphere!");
+            document.getElementById("paymentForm")
+                .addEventListener("submit", function (e) {
 
-            localStorage.removeItem("cart");
+                e.preventDefault();
 
-            window.location.href = "index.html";
+                if (cart.length === 0) {
+                    alert("Your cart is empty 😢");
+                    return;
+                }
+
+                alert("Payment Successful 🌸 Thank you for shopping with BloomSphere!");
+
+                localStorage.removeItem("cart");
+
+                window.location.href = "index.html";
+            });
         });
     </script>
 
