@@ -7,26 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Sidebar Navigation -->
-    <div class="sidebar">
+    <nav class="sidebar" aria-label="Main Navigation">
         <h2>BloomSphere</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#fruits">Fruits</a></li>
-            <li><a href="#plants">Plants</a></li>
-            <li><a href="#decorative">Decorative Plants</a></li>
+            <li><a href="index.html#fruits">Fruits</a></li>
+            <li><a href="index.html#plants">Plants</a></li>
+            <li><a href="index.html#decorative">Decorative Plants</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <!-- Cart Section -->
-    <div class="cart-container">
-        <h2>Your Cart</h2>
-        <div class="cart-items">
+    <!-- Main Cart Section -->
+    <main class="cart-container">
+        <header>
+            <h1>Your Cart</h1>
+        </header>
+
+        <section class="cart-items" aria-live="polite">
             <!-- Dynamically added cart items will go here -->
-        </div>
-        <button class="checkout-btn">Proceed to Checkout</button>
-    </div>
+        </section>
+
+        <footer class="cart-footer">
+            <button class="checkout-btn" type="button">
+                Proceed to Checkout
+            </button>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
+
 </body>
 </html>
