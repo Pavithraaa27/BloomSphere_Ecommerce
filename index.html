@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
     <nav class="sidebar" aria-label="Main Navigation">
         <h2>BloomSphere</h2>
         <ul>
@@ -21,63 +20,106 @@
 
     <main>
 
-        <!-- Hero Section -->
         <section class="hero">
             <h1 class="title">Welcome to BloomSphere</h1>
             <p class="punchline">Bringing Nature to Your Doorstep</p>
         </section>
 
-        <!-- Search -->
         <section class="search-container">
             <input type="text" id="search-box" placeholder="Search for a plant..." aria-label="Search plants">
             <button id="search-btn">Search</button>
         </section>
 
-        <!-- Fruits Section -->
         <section id="fruits" class="product-category">
             <h2>Fruits</h2>
             <div class="products">
 
                 <div class="product">
-                    <img src="..." alt="Pomegranate Plant">
+                    <img src="images/pomegranate.jpg" alt="Pomegranate Plant">
                     <h3>Pomegranate Plant</h3>
                     <p>Rich pomegranate plant for your garden</p>
                     <p class="price">Rs 250/-</p>
-                    <button onclick="addToCart('Pomegranate Plant')">Add to Cart</button>
+                    <button onclick="addToCart('Pomegranate Plant',250)">Add to Cart</button>
                 </div>
 
                 <div class="product">
-                    <img src="..." alt="Pineapple Plant">
+                    <img src="images/pineapple.jpg" alt="Pineapple Plant">
                     <h3>Pineapple Plant</h3>
-                    <p>Get yours now!</p>
+                    <p>Tropical pineapple plant for home growing</p>
                     <p class="price">Rs 1999/-</p>
-                    <button onclick="addToCart('Pineapple Plant')">Add to Cart</button>
+                    <button onclick="addToCart('Pineapple Plant',1999)">Add to Cart</button>
                 </div>
 
                 <div class="product">
-                    <img src="..." alt="Guava Plant">
+                    <img src="images/guava.jpg" alt="Guava Plant">
                     <h3>Guava Plant</h3>
                     <p>Reddish-white guava plant</p>
                     <p class="price">Rs 799/-</p>
-                    <button onclick="addToCart('Guava Plant')">Add to Cart</button>
+                    <button onclick="addToCart('Guava Plant',799)">Add to Cart</button>
                 </div>
 
             </div>
         </section>
 
-        <!-- Plants Section -->
         <section id="plants" class="product-category">
             <h2>Plants</h2>
             <div class="products">
-                <!-- Keep your existing cleaned plant cards here -->
+
+                <div class="product">
+                    <img src="images/aloe-vera.jpg" alt="Aloe Vera">
+                    <h3>Aloe Vera</h3>
+                    <p>Medicinal indoor plant</p>
+                    <p class="price">Rs 149/-</p>
+                    <button onclick="addToCart('Aloe Vera',149)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="images/money-plant.jpg" alt="Money Plant">
+                    <h3>Money Plant</h3>
+                    <p>Brings positivity and fresh air</p>
+                    <p class="price">Rs 199/-</p>
+                    <button onclick="addToCart('Money Plant',199)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="images/snake-plant.jpg" alt="Snake Plant">
+                    <h3>Snake Plant</h3>
+                    <p>Low maintenance indoor plant</p>
+                    <p class="price">Rs 299/-</p>
+                    <button onclick="addToCart('Snake Plant',299)">Add to Cart</button>
+                </div>
+
             </div>
         </section>
 
-        <!-- Decorative Section -->
         <section id="decorative" class="product-category">
             <h2>Decorative Plants</h2>
             <div class="products">
-                <!-- Keep your existing cleaned decorative cards here -->
+
+                <div class="product">
+                    <img src="images/bonsai.jpg" alt="Bonsai Plant">
+                    <h3>Bonsai Plant</h3>
+                    <p>Elegant mini tree for decoration</p>
+                    <p class="price">Rs 1499/-</p>
+                    <button onclick="addToCart('Bonsai Plant',1499)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="images/areca-palm.jpg" alt="Areca Palm">
+                    <h3>Areca Palm</h3>
+                    <p>Beautiful decorative indoor palm</p>
+                    <p class="price">Rs 899/-</p>
+                    <button onclick="addToCart('Areca Palm',899)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="images/peace-lily.jpg" alt="Peace Lily">
+                    <h3>Peace Lily</h3>
+                    <p>Flowering indoor decorative plant</p>
+                    <p class="price">Rs 599/-</p>
+                    <button onclick="addToCart('Peace Lily',599)">Add to Cart</button>
+                </div>
+
             </div>
         </section>
 
@@ -86,5 +128,3 @@
     <script src="js/script.js" defer></script>
 </body>
 </html>
-
-
