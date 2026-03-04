@@ -64,3 +64,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchBox = document.getElementById("search-box");
+    const products = document.querySelectorAll(".product");
+
+    if (!searchBox) return;
+
+    searchBox.addEventListener("keyup", () => {
+        const value = searchBox.value.toLowerCase();
+
+        products.forEach(product => {
+            const name = product.querySelector("h3").textContent.toLowerCase();
+            product.style.display = name.includes(value) ? "block" : "none";
+        });
+    });
+});
