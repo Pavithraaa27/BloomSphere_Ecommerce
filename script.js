@@ -1,91 +1,151 @@
-// Cart logic with localStorage integration
-let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+// ===============================
+// CART LOGIC WITH LOCAL STORAGE
+// ===============================
 
-function addToCart(productName) {
-    if (cartItems[productName]) {
-        cartItems[productName]++;
-    } else {
-        cartItems[productName] = 1;
-    }
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    alert(`${productName} has been added to your cart!`);
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || {};
+
+// Save cart to localStorage
+function saveCart() {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    updateCartCount();
 }
 
-// Load cart items on cart.html page
+// Add to cart
+function addToCart(productName) {
+    cartItems[productName] = (cartItems[productName] || 0) + 1;
+    saveCart();
+    showToast(`${productName} added to cart`);
+}
+
+// Load cart items (cart.html)
 function loadCartItems() {
-    const cartContainer = document.querySelector('.cart-items');
-    cartContainer.innerHTML = '';
+    const cartContainer = document.querySelector(".cart-items");
+    if (!cartContainer) return;
+
+    cartContainer.innerHTML = "";
 
     if (Object.keys(cartItems).length === 0) {
-        cartContainer.innerHTML = '<p>Your cart is empty</p>';
+        cartContainer.innerHTML = "<p>Your cart is empty</p>";
         return;
     }
 
     Object.entries(cartItems).forEach(([item, quantity]) => {
-        const itemElement = document.createElement('div');
-        itemElement.classList.add('cart-item');
+        const itemElement = document.createElement("div");
+        itemElement.classList.add("cart-item");
+
         itemElement.innerHTML = `
-            <span>${item} x${quantity}</span>
+            <span>${item}</span>
             <div class="quantity-controls">
-                <button onclick="updateQuantity('${item}', -1)" ${quantity === 1 ? 'disabled' : ''}>-</button>
+                <button class="decrease">-</button>
                 <span>${quantity}</span>
-                <button onclick="updateQuantity('${item}', 1)">+</button>
+                <button class="increase">+</button>
             </div>
         `;
+
+        // Attach event listeners (NO inline JS)
+        itemElement.querySelector(".decrease").addEventListener("click", () => {
+            updateQuantity(item, -1);
+        });
+
+        itemElement.querySelector(".increase").addEventListener("click", () => {
+            updateQuantity(item, 1);
+        });
+
         cartContainer.appendChild(itemElement);
     });
 }
 
-// Update quantity and prevent it from going below 1
+// Update quantity
 function updateQuantity(item, change) {
-    if (cartItems[item] + change < 1) {
+    cartItems[item] += change;
+
+    if (cartItems[item] <= 0) {
         delete cartItems[item];
-    } else {
-        cartItems[item] += change;
     }
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    saveCart();
     loadCartItems();
 }
 
-// Clear all items from the cart
+// Clear cart
 function clearCart() {
     cartItems = {};
-    localStorage.removeItem('cartItems');
+    localStorage.removeItem("cartItems");
     loadCartItems();
+    updateCartCount();
 }
 
-// Redirect to payment page on checkout
-const checkoutBtn = document.querySelector('.checkout-btn');
-if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', () => {
-        window.location.href = 'payment.html';
+// ===============================
+// CART COUNT BADGE (Optional)
+// ===============================
+
+function updateCartCount() {
+    const cartCount = document.querySelector(".cart-count");
+    if (!cartCount) return;
+
+    const totalItems = Object.values(cartItems).reduce((a, b) => a + b, 0);
+    cartCount.textContent = totalItems;
+}
+
+// ===============================
+// SEARCH FUNCTIONALITY
+// ===============================
+
+function initSearch() {
+    const searchBtn = document.getElementById("search-btn");
+    const searchBox = document.getElementById("search-box");
+
+    if (!searchBtn || !searchBox) return;
+
+    searchBtn.addEventListener("click", () => {
+        const searchQuery = searchBox.value.toLowerCase();
+        const products = document.querySelectorAll(".product");
+
+        products.forEach(product => {
+            const productName = product.querySelector("h3").textContent.toLowerCase();
+            product.style.display = productName.includes(searchQuery)
+                ? "block"
+                : "none";
+        });
     });
 }
 
-// Clear cart button logic
-const clearCartBtn = document.querySelector('.clear-cart-btn');
-if (clearCartBtn) {
-    clearCartBtn.addEventListener('click', () => {
-        clearCart();
+// ===============================
+// CHECKOUT BUTTON
+// ===============================
+
+function initCheckout() {
+    const checkoutBtn = document.querySelector(".checkout-btn");
+    if (!checkoutBtn) return;
+
+    checkoutBtn.addEventListener("click", () => {
+        window.location.href = "payment.html";
     });
 }
 
-// Initialize cart page if on cart.html
-if (window.location.pathname.includes('cart.html')) {
+// ===============================
+// SIMPLE TOAST (Better than alert)
+// ===============================
+
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 2000);
+}
+
+// ===============================
+// INIT ON PAGE LOAD
+// ===============================
+
+document.addEventListener("DOMContentLoaded", () => {
     loadCartItems();
-}
-
-// Search functionality
-document.getElementById('search-btn').addEventListener('click', function () {
-    let searchQuery = document.getElementById('search-box').value.toLowerCase();
-    let products = document.querySelectorAll('.product');
-
-    products.forEach(product => {
-        let productName = product.querySelector('h3').textContent.toLowerCase();
-        if (productName.includes(searchQuery)) {
-            product.style.display = 'block';
-        } else {
-            product.style.display = 'none';
-        }
-    });
+    initSearch();
+    initCheckout();
+    updateCartCount();
 });
