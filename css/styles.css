@@ -371,4 +371,18 @@ button:hover {
 }
 
 
+/* =========================
+   PAYMENT MAIN LAYOUT
+========================= */
 
+.payment-main {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+.total-amount {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
