@@ -2,27 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment - BloomSphere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Sidebar Navigation -->
-    <div class="sidebar">
+    <nav class="sidebar" aria-label="Main Navigation">
         <h2>BloomSphere</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="cart.html">View Cart</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <!-- Payment Section -->
-    <div class="payment-container">
-        <h2>Payment Information</h2>
-        <!-- Add form or payment integration here -->
-        <button class="payment-btn">Complete Payment</button>
-    </div>
-    
-    <script src="script.js"></script>
+    <!-- Main Payment Section -->
+    <main class="payment-container">
+        <header>
+            <h1>Secure Payment</h1>
+            <p>Please enter your payment details below</p>
+        </header>
+
+        <form class="payment-form" id="paymentForm">
+
+            <!-- Customer Info -->
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Card Info -->
+            <div class="form-group">
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" name="cardnumber" maxlength="16" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="month" id="expiry" name="expiry" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" name="cvv" maxlength="3" required>
+                </div>
+            </div>
+
+            <!-- Payment Button -->
+            <button type="submit" class="payment-btn">
+                Complete Payment
+            </button>
+
+        </form>
+    </main>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
