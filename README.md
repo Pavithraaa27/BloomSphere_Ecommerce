@@ -3,7 +3,6 @@
 BloomSphere is a modern, responsive plant e-commerce website built using HTML, CSS, and Vanilla JavaScript.  
 It simulates a real online shopping experience with cart management and checkout functionality using browser storage.
 
-
 ---
 
 ## 🚀 Features
