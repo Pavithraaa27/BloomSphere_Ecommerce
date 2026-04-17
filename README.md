@@ -16,6 +16,7 @@ It simulates a real online shopping experience with cart management and checkout
 - 📱 Fully responsive design
 - ✨ Smooth UI animations & modern layout
 
+
 ---
 
 ## 🛠️ Tech Stack
