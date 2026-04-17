@@ -7,6 +7,7 @@ It simulates a real online shopping experience with cart management and checkout
 
 ## 🚀 Features
 
+
 - 🛒 Add to Cart with LocalStorage persistence
 - 🔢 Quantity management system
 - 🗑 Remove items from cart
